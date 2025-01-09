@@ -398,11 +398,9 @@ def Train():
 
     st.write(f"Target (y): {default_target}")
 
-    exclude_columns = ['status', 'prev_sold_date', 'city', 'state']
-
     feature_columns = st.multiselect(
         'Pilih Fitur (X)', 
-        options=[col for col in data.columns if col != default_target and col not in exclude_columns],
+        options=[col for col in data.columns if col != default_target],
         default=['brokered_by', 'bed', 'bath', 'acre_lot', 'street', 'zip_code', 'house_size', 'city_encoded', 'state_encoded']
     )
 
