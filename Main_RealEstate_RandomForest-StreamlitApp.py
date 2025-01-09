@@ -411,7 +411,7 @@ def Train():
     test_sizes = [10, 20, 30, 40, 50]
     test_size = st.select_slider("Test Size (%)", options=test_sizes, value=20) / 100
 
-    X_train, X_test, y_train, y_test = TrainTest_Split(X, y, test_size=test_size)
+    X_train, X_test, y_train, y_test = TrainTest_Split(X, y, test_size=test_size, random_state=42)
 
     st.write(f"Porsi Tes: {test_size * 100}%")
     st.write(f"Jumlah _training data:_ {len(X_train)} samples")
