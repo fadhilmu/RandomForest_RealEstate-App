@@ -434,6 +434,7 @@ def Train():
     st.markdown("---")
 
     st.write(f"NOTE: apabila Anda menggunakan Nilai Default, maka Training Model memerlukan Waktu 20 Detik")
+    st.write(f"random_state=42")
 
     if st.button("**Train Model**"):
         if not feature_columns:
